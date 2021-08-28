@@ -1,0 +1,142 @@
+<head>
+  <head>
+      <title>Apple Music Electron - Version 2.5.0 Changelog</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Apple Music Electron">
+      <meta property="og:image" content="https://cryptofyre.org/AME/assets/img/banneropen.png">
+      <meta name="description" content="A free, lightweight, open source alternative to iTunes and other Apple Music applications based on Electron 13.1.0">
+      <meta property="og:type" content="website">
+      <meta name="twitter:image" content="https://cryptofyre.org/AME/assets/img/banneropen.png">
+      <meta name="twitter:description" content="A free, lightweight, open source alternative to iTunes and other Apple Music applications based on Electron 13.1.0">
+      <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
+      <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
+      <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
+      <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
+      <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
+      <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+      <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+      <link rel="stylesheet" href="../assets/css/styles.min.css">
+      <meta name="theme-color" content="rgba(21,8,90,1)" class="theme">
+</head>
+
+<body>
+  <div markdown="1">
+
+    
+# Apple Music Electron Version 2.5.0
+### Summary
+
+***
+
+This update is bloody massive so making a changelog is going to take some time, but I wanted to make sure you all got to experience it so im releasing it early.
+
+### Changelog
+
+***
+
+**Application Configuration**
+- Upgraded configuration to be clearer and more accurate with settings.
+- Added configuration options for audio quality, analytics, backbutton, transparency, incognito mode etc.
+- Errors for missing configuration items resolved.
+- When configuration options are changed, a restart now option is shown.
+- The application no longer needs authMode! Logging in can be done as simply as it done on the website.
+
+**Window Handling**
+- The application now checks for errors on all window senarios to prevent errors being thrown.
+- Startup parameters now act the way they're supposed to, with the application being hidden / minimized at the correct time.
+
+**Miscellaneous**
+- Electron updated to Electron 14.0.0-beta.24.
+- Large memory usage due to logging and other various listeners resolved.
+- Sentry added for user diagnostics to help improve the application.
+- User can now set their default landing page on the application.
+- Detached devtools are now available.
+- Theme development mode no longer overrides themes.
+- Docker file added.
+- Tray icon is now done in nativeImage format for macos and application performance.
+- Instance handler now working correctly.
+- Profile context menu icons updated to make it clearer.
+- Now when you scroll over the volume slider, it allows you to change it using scroll wheel.
+- Security policy added to stop Apple from messing everything up.
+
+**Auto Update**
+- Entire system overhauled to now state the current version to the users and a download bar for progress on downloading the latest version.
+- Now notifies user when download is complete with a dialog popup asking if they wish to install.
+- Auto Update no longer errors when application is not packed.
+- Check for updates now done when the application is ready.
+
+**Media Handling**
+- DiscordRPC now created and handled within the main application code, instead of in a module.
+- Media listeners no longer send multiple messages.
+- MPRIS support upgraded to prevent native application media instance from being created.
+- MediaKeyHandling now works with the launch parameter being added at the correct place.
+- DiscordRPC, MPRIS and LastFM's functions are all being handled in a singular file per media handler, speeding up the application preventing as many requires.
+- DiscordRPC now longer errors when radio or any source that does not have a UNIX timestamp on its duration.
+
+**Visual**
+- Improved macOS Emulation (left align) - Changing window size no longer blocked around button area.
+- macOS Emulation (right align) no longer causes issues for users with content being overlayed, or buttons not being clickable, and buttons have been reorganised to reflect the Windows operating system layout.
+- A back button has been added and is only shown when a user can go back or is on pages that are found on the sidebar.
+- Remove footer option added.
+- All standard CSS is now handled in a singular stylesheet instead of multiple.
+
+**Themes**
+- All themes updated for a transparency variable to control all transparency.
+- Theme directory is no longer causing errors for users due to a typo.
+- Chmod is no longer attempted if the directory does not exist.
+- When compiling, themes are now cloned directory from the [Apple-Music-Electron-Themes](https://github.com/Apple-Music-Electron/Apple-Music-Electron-Themes) repository.
+- Acrylic by @cryptofyre added.
+
+**Acrylic Window**
+- Added [acrylic window](https://github.com/Seo-Rii/electron-acrylic-window) for users on Windows 10, blur-behind still available for users on incompatible operating systems.
+- Added option to set application refresh rate.
+- Added option to allow users to disable acrylic affect on window when its not focused, boosting performance.
+
+**Logging**
+- Logging greatly improved to provide more information, certain logs are not sent if user has the verbose logging option disabled. 
+- Operating system, electron version and application version are now logged on startup.
+
+***
+
+### Closed Issues
+
+- #192
+- #188 (Not fully resolved, Linux users should take not)
+- #184
+- #183
+- #181
+- #180
+- #179
+- #178
+- #175
+- #171
+- #168
+- #165
+- #164
+
+***
+
+### Known Issues
+
+- Linux theme folder permissions not being set by Chmod.
+- Content missing on the page on install of 2.5.0 (Just perform a clean install and that should resolve it)
+
+*** 
+
+### Final Notes
+
+*Thank you to all those who beta tested 2.5.0, all of you were incredibly helpful and this application what now be this way without you. *
+
+*Thanks to all the Apple Music Electron Team for all the strides in development that were made on this version. *
+
+We hope you enjoy this release, if you have any issues feel free to open a bug report [here](https://github.com/Apple-Music-Electron/Apple-Music-Electron/issues/new/choose) or look through our [FAQs](https://github.com/Apple-Music-Electron/Apple-Music-Electron/wiki/FAQs).
+
+  </div>
+</body>
