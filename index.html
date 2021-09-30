@@ -1,108 +1,310 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Apple Music Electron</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://github.com/Apple-Music-Electron/applemusicelectron.com/blob/main/shronk.png?raw=true"/>
+    <!-- ben is so sussy -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+
+    <!-- Open Graph Ligma -->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta property="og:title" content="Apple Music Electron">
+    <meta property="og:site_name" content="Apple Music Electron Official Site">
+    <meta property="og:url" content="https://applemusicelectron.com">
+    <meta property="og:description" content="A free, lightweight, open source alternative to iTunes and other Apple Music applications based on Electron 15">
+    <meta property="og:type" content="business.business">
+    <meta property="og:image" content="https://github.com/Apple-Music-Electron/applemusicelectron.com/blob/main/smallerwebbanner.png?raw=true">
+
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptofyre">
+    <meta name="twitter:description" content="A free, lightweight, open source alternative to iTunes and other Apple Music applications based on Electron 15">
     <meta name="twitter:title" content="Apple Music Electron">
-    <meta property="og:image" content="https://cryptofyre.org/AME/assets/img/banneropen.png">
-    <meta name="description" content="A free, lightweight, open source alternative to iTunes and other Apple Music applications based on Electron 13.1.0">
-    <meta property="og:type" content="website">
-    <meta name="twitter:image" content="https://cryptofyre.org/AME/assets/img/banneropen.png">
-    <meta name="twitter:description" content="A free, lightweight, open source alternative to iTunes and other Apple Music applications based on Electron 13.1.0">
-    <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
-    <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
-    <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
-    <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
-    <link rel="icon" type="image/png" sizes="400x400" href="assets/img/hr40_0pb_400x400.png">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-    <meta name="theme-color" content="rgba(21,8,90,1)" class="theme">
+    <meta name="twitter:image" content="https://github.com/Apple-Music-Electron/applemusicelectron.com/blob/main/smallerwebbanner.png?raw=true">
 
 
 </head>
+<body style="background-color:#000000;">
+        <!--Main Navigation-->
+    <header>
+      <style>
 
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57" style="background: rgb(0,0,0);">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container"><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
-            <div class="collapse navbar-collapse text-center" id="navbarResponsive">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Releases</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">about</a></li>
-                </ul>
-            </div>
+        body {
+          color: rgb(255, 255, 255);
+        }
+        /* Carousel styling */
+        #introCarousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item.active {
+          height: 100vh;
+        }
+
+        .carousel-item:nth-child(1) {
+          background-image: url('https://github.com/Apple-Music-Electron/applemusicelectron.com/blob/main/smallerwebbanner.png?raw=true');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+
+        /* Height for devices larger than 576px */
+        @media (min-width: 992px) {
+          #introCarousel {
+            margin-top: -58.59px;
+          }
+          #introCarousel,
+          .carousel-inner,
+          .carousel-item,
+          .carousel-item.active {
+            height: 50vh;
+          }
+        }
+
+        .navbar .nav-link {
+          color: #fff !important;
+        }
+
+        
+      </style>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+        <div class="container-fluid">
+          <!-- Navbar brand -->
+          <a class="navbar-brand nav-link" target="_blank" href="https://applemusicelectron.com">
+            <strong>AME</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" aria-current="page" href="https://applemusicelectron.com/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="nofollow"
+                  target="_blank">Microsoft Store</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Apple-Music-Electron/Apple-Music-Electron/releases" target="_blank">GitHub Releases</a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav d-flex flex-row">
+              <!-- Icons -->
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://twitter.com/AppleElectron" rel="nofollow" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://github.com/Apple-Music-Electron" rel="nofollow" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-    <header class="text-center text-white d-flex masthead" id="about" style="background: url(&quot;assets/img/blurbackdrop.png&quot;) center / cover no-repeat, #000000;border-color: rgb(0,0,0);">
-        <div class="container my-auto">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase"></h1><img class="img-fluid" src="assets/img/bannertrans.png" style="min-width: 0px;min-height: 0px;"></div>
+      </nav>
+      <!-- Navbar -->
+
+      <!-- Carousel wrapper -->
+      <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+
+        <!-- Inner -->
+        <div class="carousel-inner">
+          <!-- Single item -->
+          <div class="carousel-item active">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.767);">
+              <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white text-center">
+                  <h1 class="mb-3">Apple Music Electron</h1>
+                  <h5 class="mb-4">A free, lightweight, open source alternative to iTunes and other Apple Music applications based on Electron 15</h5>
+                  <div>
+                    <img src="https://img.shields.io/github/stars/Apple-Music-Electron/Apple-Music-Electron" alt="Stars">
+                    <img src="https://img.shields.io/github/forks/Apple-Music-Electron/Apple-Music-Electron" alt="Forks">
+                    <img src="https://img.shields.io/github/downloads/Apple-Music-Electron/Apple-Music-Electron/total.svg?style=flat" alt="Downloads">
+                    <a href="https://ko-fi.com/cryptofyre" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Us A Coffee donate button" /></a>
+                  </div>
+                  <a
+                    class="btn btn-outline-light btn-lg m-2"
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    role="button"
+                    rel="nofollow"
+                    target="_blank"
+                    >Microsoft Store</a
+                  >
+                  <a
+                    class="btn btn-outline-light btn-lg m-2"
+                    href="https://github.com/Apple-Music-Electron/Apple-Music-Electron/releases"
+                    target="_blank"
+                    role="button"
+                    >GitHub Releases</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="col-lg-8 mx-auto">
-                <p class="text-faded mb-5" style="font-family: 'Open Sans', sans-serif;font-size: 18.4px;font-weight: bold;color: rgba(255,255,255,0.85);">A free, lightweight, open source alternative to iTunes and other Apple Music applications based on Electron 13.1.0<br></p>
-            </div>
+          </div>
         </div>
+      </div>
+      <!-- Carousel wrapper -->
     </header>
-    <section id="services" class="bg-primary" style="background: rgb(0,0,0);height: 363px;">
-        <div class="container">
-            <div class="row">
-                <div class="col offset-lg-8 text-center mx-auto">
-                    <h2 class="text-white section-heading" style="font-family: 'Open Sans', sans-serif;font-weight: bold;">Let's get straight to the point.</h2>
-                    <hr class="light my-4">
-                    <p class="text-faded mb-4" style="font-family: 'Open Sans', sans-serif;">You can get downloading and running Apple Music Electron in no time. Click the button below to see the releases on GitHub or just stick around if you wanna explore first.</p><a class="btn btn-light btn-xl" role="button" href="https://github.com/Apple-Music-Electron/Apple-Music-Electron/releases">download</a></div>
-            </div>
-        </div>
-    </section>
-    <section class="flex-grow-1" id="about" style="background: #000000;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="mx-auto service-box mt-5"><i class="fa fa-github fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-once="true" style="color: rgb(255,255,255);"></i>
-                        <h3 class="mb-3" style="color: rgb(255,255,255);">Open Source</h3>
-                        <p class="text-muted mb-0" style="font-family: 'Open Sans', sans-serif;">Apple Music Electron is completely open source and available to the public under the MIT license.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="mx-auto service-box mt-5"><i class="fa fa-paper-plane fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-delay="200" data-aos-once="true" style="color: rgb(255,255,255);"></i>
-                        <h3 class="mb-3" style="color: rgb(255,255,255);">App Updates</h3>
-                        <p class="text-muted mb-0" style="font-family: 'Open Sans', sans-serif;">Updates are done through the app so you don't have to worry about obtaining the latest releases.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="mx-auto service-box mt-5"><i class="fa fa-newspaper-o fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-delay="400" data-aos-once="true"></i>
-                        <h3 class="mb-3" style="color: rgb(255,255,255);font-size: 25px;">Community Updates</h3>
-                        <p class="text-muted mb-0" style="font-family: 'Open Sans', sans-serif;">We push updates and beta builds as much as possible to make sure you know what's available.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="mx-auto service-box mt-5" style="font-family: 'Open Sans', sans-serif;"><i class="fa fa-heart fa-4x text-primary mb-3 sr-icons" data-aos="fade" data-aos-duration="200" data-aos-delay="600" data-aos-once="true"></i>
-                        <h3 class="mb-3" style="color: rgb(255,255,255);">Made with Love</h3>
-                        <p class="text-muted mb-0">This entire project is driven by community features and pull requests from the community. This project wouldn't be possible without all of you!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="text-white bg-dark" id="portfolio" style="height: 487px;">
-        <div class="container text-center">
-            <h2 class="mb-4">Check out the GitHub page for more information.</h2><a class="btn btn-light btn-xl sr-button" role="button" data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" href="https://github.com/Apple-Music-Electron/Apple-Music-Electron">Visit github</a></div>
-    </section>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
-    <!--<script src="assets/js/scroll.js"></script>-->
-</body>
+    <!--Main Navigation-->
 
+    <!--Main layout-->
+    <main class="mt-5">
+      <div class="container">
+        <!--Section: Content-->
+        <section>
+          <div class="row">
+            <div class="col-md-6 gx-5 mb-4">
+              <div class="bg-image shadow-2-strong" data-mdb-ripple-color="light">
+                <img src="https://github.com/Apple-Music-Electron/applemusicelectron.com/blob/main/closeup.png?raw=true" class="img-fluid" />
+                <a>
+                  <div class="mask" style="background-color: rgba(0, 0, 0, 0.582);"></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 gx-5 mb-4">
+              <h4><strong>Changing the scene</strong></h4>
+              <p class="text-muted">
+                Who wants a lousy out of date app like iTunes for doing a simple task as a part of your day? We aimed to change that, and so we did. Creating an application that allowed everyone to share and customize their music experience without Apple's restrictions and guidelines.
+              </p>
+              <p><strong>And here was born Apple Music Electron</strong></p>
+              <p class="text-muted">
+                Programming let alone stylizing the app was definitely not easy but with all the support and user feedback we managed to pull off something that we want to show off to the world.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--Section: Content-->
+
+        <hr class="my-5" />
+
+        <!--Section: Content-->
+        <section class="text-center">
+          <h4 class="mb-5"><strong>Features</strong></h4>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div class="bg-image">
+                  <img
+                    src="https://github.com/Apple-Music-Electron/applemusicelectron.com/blob/main/settings.png?raw=true"
+                    class="img-fluid"
+                  />
+                  <a>
+                    <div class="mask" style="background-color: rgba(0, 0, 0, 0.178);"></div>
+                  </a>
+                </div>
+                <div style="background-color: rgb(0, 0, 0);" class="card-body">
+                  <h5 class="card-title">Customizable</h5>
+                  <p class="card-text">
+                    We wanted to allow others the ability to customize and tweak their settings to their liking.
+                  </p>
+                  <a href="https://github.com/Apple-Music-Electron/Apple-Music-Electron/wiki" class="btn btn-primary">Documentation</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image ">
+                  <img
+                    src="https://github.com/Apple-Music-Electron/applemusicelectron.com/blob/main/visualsettings.png?raw=true"
+                    class="img-fluid"
+                  />
+                  <a>
+                    <div class="mask" style="background-color: rgba(0, 0, 0, 0.308);"></div>
+                  </a>
+                </div>
+                <div style="background-color: rgb(0, 0, 0);" class="card-body">
+                  <h5 class="card-title">Themeable</h5>
+                  <p class="card-text">
+                    Users can create and use themes from others or use the pre-existing theme set to stylize their application.
+                  </p>
+                  <a href="https://github.com/Apple-Music-Electron/Apple-Music-Electron/wiki/Theme-Creation" class="btn btn-primary">Theme Docs</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image">
+                  <img
+                    src="https://github.com/Apple-Music-Electron/applemusicelectron.com/blob/main/compile.png?raw=true"
+                    class="img-fluid"
+                  />
+                  <a>
+                    <div class="mask" style="background-color: rgba(0, 0, 0, 0.308);"></div>
+                  </a>
+                </div>
+                <div style="background-color: rgb(0, 0, 0);" class="card-body">
+                  <h5 class="card-title">Compilable</h5>
+                  <p class="card-text">
+                    We tried our hardest to ensure the application is compile friendly on all platforms, and again so we did.
+                  </p>
+                  <a href="https://github.com/Apple-Music-Electron/Apple-Music-Electron/wiki/Compiling-on-Platforms" class="btn btn-primary">Compilation Docs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Section: Content-->
+
+        <hr class="my-5" />
+      </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="bg-light text-lg-start">
+
+      <div style="background-color: rgb(0, 0, 0)" class="text-center py-4 align-items-center">
+        <a
+          href="https://twitter.com/AppleElectron"
+          class="btn btn-primary m-1"
+          role="button"
+          rel="nofollow"
+          target="_blank"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://github.com/Apple-Music-Electron/"
+          class="btn btn-primary m-1"
+          role="button"
+          rel="nofollow"
+          target="_blank"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+        © 2021 Copyright:
+        <a class="text-dark" href="https://github.com/Apple-Music-Electron">Apple Music Electron Team</a>
+      </div>
+      <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+        <a class="text-dark">Note: This project is NOT affliated with Apple in anyway shape or form. The project is open source and free to use (with an Apple Music subscription)</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!--Footer-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
 </html>
