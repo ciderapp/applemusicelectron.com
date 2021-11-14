@@ -11,16 +11,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
-        function getUrlVars() {
-            var vars = {};
-            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
-                vars[key] = value;
-            });
-            return vars;
-        }
-        var id = new URL(window.location.href).searchParams.get('id')
-
-        window.location.href = "ame://" + id;
+        const QueryString = window.location.search;
+        const urlParams = new URLSearchParams(QueryString);
+        if (urlParams.has('id')) window.location.href = "ame://" + urlParams.get('id');
         setTimeout(() => {
             window.location.href = 'https://applemusicelectron.com';
         }, 1000);
